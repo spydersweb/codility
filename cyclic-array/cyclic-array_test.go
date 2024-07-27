@@ -30,6 +30,12 @@ func TestCyclicArray(t *testing.T) {
 			expectedArray: []int{3, 4, 1, 2},
 			NoCycles:      6,
 		},
+		{
+			name:          "test for odd cycles",
+			inputArray:    []int{1, 2, 3, 4},
+			expectedArray: []int{2, 3, 4, 1},
+			NoCycles:      3,
+		},
 	}
 
 	for _, b := range tests {
