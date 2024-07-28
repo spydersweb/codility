@@ -8,7 +8,7 @@ func TapeEquilibrium(A []int) int {
 	for i := 0; i < len(A); i++ {
 		pSum := SumArray(A[0 : i+1])
 
-		bSum := SumArray(A[i+1 : len(A)])
+		bSum := SumArray(A[i+1:])
 		var diff int = bSum - pSum
 		if pSum >= bSum {
 			diff = pSum - bSum
